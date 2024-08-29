@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hangman</title>
+    <link rel="shortcut icon" href="img/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="container">
+        <div class="grid">
+            <div class="hangman">
+                <h2 class="title">HANGMAM GAME</h2>
+                <div class="game-info">
+                    <img id="img-game" src="img/hangman0.svg" alt="hangman">
+                </div>
+            </div>
+
+            <!-- Diálogo de Game Over -->
+            <div id="game-over-dialog" class="dialog-overlay">
+                <div class="dialog-content">
+                    <img src="img/lost.gif" alt="Sad Emoji" class="emoji-icon">
+                    <h2>Game Over!</h2>
+                    <p>The correct word was: <span id="correct-word-2" class="correct-word"></span></p>
+                    <button id="restart-button" class="restart-button">Play again</button>
+                </div>
+            </div>
+
+            <!-- Dialog win game -->
+             <div class="game-win" id="dialog-overshow">
+                <div class="dialog-box">
+                    <img src="img/victory.gif" alt="emoji icon win" class="emoji-icon">
+                    <h2>You won the game</h2>
+                    <p>The word: <span id="correct-word" class="correct-word"></span></p>
+                    <button id="restart-button" class="restart-button-2">Play again</button>
+                </div>
+             </div>
+
+            <div id="game">
+                <div class="show_words">
+                    _ _ _ _ _ _ _
+                </div>
+                <div class="infos">
+                    <p class="hint">Hint: A tall African mammal with a long neck</p>
+                    <p class="attempteds">Incorrect guesses: <span id="numb">0</span><span class="color-hint">6</span></p>
+                </div>
+
+                <div class="box-letters">
+                    <table class="info-table">
+                        <tr class="column-1">
+                            <td>A</td>
+                            <td>B</td>
+                            <td>C</td>
+                            <td>D</td>
+                            <td>E</td>
+                            <td>F</td>
+                            <td>G</td>
+                            <td>H</td>
+                            <td>I</td>
+                        </tr>
+                        <tr class="column-2">
+                            <td>J</td>
+                            <td>K</td>
+                            <td>L</td>
+                            <td>M</td>
+                            <td>N</td>
+                            <td>O</td>
+                            <td>P</td>
+                            <td>Q</td>
+                            <td>R</td>
+                        </tr>
+                    </table>
+                    <div class="second-box">
+                        <table id="info_table">
+                            <tr class="column-3">
+                                <td>S</td>
+                                <td>T</td>
+                                <td>U</td>
+                                <td>V</td>
+                                <td>W</td>
+                                <td>X</td>
+                                <td>Y</td>
+                                <td>Z</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>
